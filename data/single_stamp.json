@@ -1,0 +1,20 @@
+{
+"id": "",
+"heading": "Berries Cherries",
+"module": {
+"resource": {
+"id": "",
+"type": "image/jpg",
+"image": "http://cdn.recipes100.com/v/4ad0738f81df6439e97ceadba2500f82.jpg",
+"desc": "Blue Berry and Rasberry",
+"caption": "Berries Cherries",
+"clipping": "left",
+"linkText": "",
+"linkNewWindow": "Yes",
+"prominence": "LOW",
+"captionBackgroundColour": "#393a3f"
+},
+"heading": "Image Resource"
+},
+"path": "component/SingleImage"
+}
