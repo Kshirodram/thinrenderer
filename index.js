@@ -1,8 +1,12 @@
 var express = require('express');
 var app = express();
+require('marko/node-require').install();
+var rootTemplate = require('./template-provider/events.marko');
 
 app.get('/', function (req, res) {
-  res.end('OK');
+  rootTemplate.render({}, function(errTplRender, tplRendered){
+  	res.send(tplRendered);
+  });  
 });
 
 var server = app.listen(3000, function () {
