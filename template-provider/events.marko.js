@@ -12,7 +12,7 @@ function create(__helpers) {
       ___tags_ssi_renderer_js,
       {
         "dataComponentUrl": "./components/stamp",
-        "dataContentModel": "./data/single_stamp.json",
+        "dataContentModel": "http://localhost:3001/api/getsinglestamp",
         "isServer": "true"
       },
       function(out) {
@@ -21,7 +21,7 @@ function create(__helpers) {
       ___tags_ssi_renderer_js,
       {
         "dataComponentUrl": "./components/stamp",
-        "dataContentModel": "./data/single_stamp.json",
+        "dataContentModel": "http://localhost:3001/api/getsinglestamp",
         "isServer": "true"
       },
       function(out) {
@@ -30,7 +30,7 @@ function create(__helpers) {
       ___tags_ssi_renderer_js,
       {
         "dataComponentUrl": "./components/stamp",
-        "dataContentModel": "./data/single_stamp.json",
+        "dataContentModel": "http://localhost:3001/api/getsinglestamp",
         "isServer": "true"
       },
       function(out) {
@@ -39,7 +39,7 @@ function create(__helpers) {
       ___tags_ssi_renderer_js,
       {
         "dataComponentUrl": "./components/stamp",
-        "dataContentModel": "./data/single_stamp.json",
+        "dataContentModel": "http://localhost:3001/api/getsinglestamp",
         "isServer": "true"
       },
       function(out) {

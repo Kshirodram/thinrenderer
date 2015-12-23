@@ -8,11 +8,8 @@ module.exports = function(input, out){
 	var component = require(path.resolve(__dirname, '../../'+input.dataComponentUrl));
 
 	superagent.get(input.dataContentModel)
-		.end(function(err, res){
-			console.log(res);
-	});
-
-	var componentContentModel = require(path.resolve(__dirname, '../../'+input.dataContentModel));	
-	var fragment = React.renderToString(React.createElement(component, {data: componentContentModel}));
-	asyncOut.end(fragment);		    
+		.end(function(err, res){			
+			var fragment = React.renderToString(React.createElement(component, {data: res.body}));
+			asyncOut.end(fragment);
+	});	
 };
