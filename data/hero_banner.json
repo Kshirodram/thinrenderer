@@ -1,0 +1,19 @@
+{
+  "id": "",
+  "heading": "Hero Banner",
+  "module": {
+    "resource": {
+      "id": "",
+      "type": "image/jpg",
+      "image": "http://cdn.playbuzz.com/cdn/c86d8bc9-54be-408d-b3d7-641a012ddd4b/060ab3dd-1f30-469a-93aa-cf1b15c4afdc.jpg",
+      "desc": "Summer Image",
+      "title": "Get ready for summer",
+      "subTitle": "Everything you need to get your summer started",
+      "clipping": "left",
+      "linkText": "",
+      "linkNewWindow": "Yes"
+    },
+    "heading": "Hero Banner Summer Image"
+  },
+  "path": "component/HeroBanner"
+}
