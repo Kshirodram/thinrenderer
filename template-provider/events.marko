@@ -1,22 +1,36 @@
-<div class="root-level-loader">
-	
-	<ssi data-component-url="./components/stamp"
-		 data-content-model="http://localhost:3001/api/getsinglestamp"
-		 isServer="true">
-	 </ssi>
+<!doctype html>
+<html>
+	<head>
+		<head>
+    <link rel="stylesheet" type="text/css" href="http://ngp-dc.com/groceries/css/extlibs/foundation.css">
+    <link rel="stylesheet" type="text/css" href="http://ngp-dc.com/groceries/css/intlibs/eventslayout.css">
+    <link rel="stylesheet" type="text/css" href="http://ngp-dc.com/groceries/components/Stamp/StampsComponent.css">
+    <link rel="stylesheet" type="text/css" href="http://ngp-dc.com/groceries/components/HeroBanner/HeroBannerComponent.css">
+    <link rel="stylesheet" type="text/css" href="http://ngp-dc.com/groceries/components/Header/HeaderComponent.css">
+    <link rel="stylesheet" type="text/css" href="http://ngp-dc.com/groceries/components/Footer/FooterComponent.css">
 
-	 <ssi data-component-url="./components/stamp"
-		 data-content-model="http://localhost:3001/api/getsinglestamp"
-		 isServer="true">
-	 </ssi>
-
-	 <ssi data-component-url="./components/stamp"
-		 data-content-model="http://localhost:3001/api/getsinglestamp"
-		 isServer="true">
-	 </ssi>
-
-	 <ssi data-component-url="./components/stamp"
-		 data-content-model="http://localhost:3001/api/getsinglestamp"
-		 isServer="true">
-	 </ssi>
-</div>
+    <meta charset="utf-8">
+    <title>Events Page</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+  </head>
+	<body>
+		<div class="root-level-loader">
+			<ssi data-component-url="./components/header"
+				data-content-model="http://localhost:3001/api/getheader"
+				isServer="true">
+			</ssi>
+			<ssi data-component-url="./components/hero_banner"
+				 data-content-model="http://localhost:3001/api/getherobanner"
+				 isServer="true">
+			 </ssi>
+			 <ssi data-component-url="./components/stamp"
+				 data-content-model="http://localhost:3001/api/getsinglestamp"
+				 isServer="true">
+			 </ssi>
+			 <ssi data-component-url="./components/footer"
+				 data-content-model="http://localhost:3001/api/getfooter"
+				 isServer="true">
+			 </ssi>
+		</div>
+	</body>
+</html>

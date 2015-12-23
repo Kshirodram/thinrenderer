@@ -1,0 +1,129 @@
+[
+  {
+    "module": {
+      "resources": {
+        "searchBarTitle": "Search",
+        "links": [
+          {
+            "infoLinks": [
+              {
+                "text": "Help",
+                "url": "http://www.tesco.pl/ezakupy/help/help.php?rel=help",
+                "target": "_blank",
+                "icon": "",
+                "iconPos": "left",
+                "sublinks": []
+              }
+            ],
+            "signinPanelLinks": [
+              {
+                "text": "Sign in",
+                "url": "https://r.tesco.pl/en-GB/login",
+                "target": "",
+                "icon": "",
+                "iconPos": "left",
+                "sublinks": []
+              },
+              {
+                "text": "Register",
+                "url": "https://r.tesco.pl/en-GB/register",
+                "target": "",
+                "icon": "",
+                "iconPos": "left",
+                "sublinks": []
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "module": {
+      "resources": [
+        {
+          "title": "GROCERIES",
+          "links": [
+            {
+              "text": "Groceries",
+              "url": "https://s.tesco.pl/en-GB/shop",
+              "target": "",
+              "icon": "icon-groceries",
+              "iconPos": "left",
+              "sublinks": []
+            },
+            {
+              "text": "Promotions",
+              "url": "https://s.tesco.pl/en-GB/promotions",
+              "target": "",
+              "icon": "icon-promotion",
+              "iconPos": "left",
+              "sublinks": []
+            },
+            {
+              "text": "My Favourites",
+              "url": "https://s.tesco.pl/en-GB/favorites",
+              "target": "",
+              "icon": "icon-my-favourites",
+              "iconPos": "left",
+              "sublinks": []
+            },
+            {
+              "text": "My Orders",
+              "url": "https://s.tesco.pl/en-GB/orders",
+              "target": "",
+              "icon": "icon-my-orders",
+              "iconPos": "left",
+              "sublinks": []
+            }
+          ]
+        },
+        {
+          "title": "MORE FROM TESCO",
+          "links": [
+            {
+              "text": "800105104",
+              "url": "tel:800105104",
+              "target": "",
+              "icon": "icon-contact",
+              "iconPos": "left",
+              "sublinks": []
+            },
+            {
+              "text": "ezakupy@tesco.pl",
+              "url": "mailto:ezakupy@tesco.pl",
+              "target": "",
+              "icon": "icon-email",
+              "iconPos": "left",
+              "sublinks": []
+            },
+            {
+              "text": "Help",
+              "url": "http://www.tesco.pl/ezakupy/help/help.php?rel=help",
+              "target": "_blank",
+              "icon": "icon-help",
+              "iconPos": "left",
+              "sublinks": []
+            },
+            {
+              "text": "My account",
+              "url": "https://s.tesco.pl/en-GB/account",
+              "target": "",
+              "icon": "icon-my-account",
+              "iconPos": "left",
+              "sublinks": []
+            },
+            {
+              "text": "Clubcard",
+              "url": "http://www.tesco.pl/clubcard",
+              "target": "_blank",
+              "icon": "icon-clubcard",
+              "iconPos": "left",
+              "sublinks": []
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

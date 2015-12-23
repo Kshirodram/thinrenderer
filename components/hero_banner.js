@@ -25,7 +25,7 @@ var HeroBannerComponent = (function (_React$Component) {
     _classCallCheck(this, HeroBannerComponent);
 
     _get(Object.getPrototypeOf(HeroBannerComponent.prototype), 'constructor', this).call(this, props);
-    this.state = { heroBannerComponentData: this.props.data.resource.module };
+    this.state = { heroBannerComponentData: this.props.data.module.resource };
     var scope = this;
   }
 

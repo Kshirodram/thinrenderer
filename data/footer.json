@@ -1,0 +1,124 @@
+{
+  "module": {
+    "resources": {
+      "copyright": "Copyright Polska Sp. z o.o. 2015",
+      "sections": [{
+        "title": "Here to help",
+        "links": [{
+          "text": "Guide price",
+          "url": "http://www.tesco.pl/ezakupy/help/help-what-is-guide-price.php?rel=help",
+          "target": "",
+          "icon": "",
+          "iconPos": ""
+        }, {
+          "text": "Safe online shopping",
+          "url": "http://www.tesco.pl/ezakupy/help/help-registration-and-my-account.php#9a",
+          "target": "",
+          "icon": "",
+          "iconPos": ""
+        }, {
+          "text": "Terms & Conditions",
+          "url": "http://www.tesco.pl/ezakupy/terms-and-conditions.php?rel=help",
+          "target": "",
+          "icon": "",
+          "iconPos": ""
+        }, {
+          "text": "Privacy & cookies",
+          "url": "http://www.tesco.pl/ezakupy/privacy-policy.php?rel=help",
+          "target": "",
+          "icon": "",
+          "iconPos": ""
+        }]
+      }, {
+        "title": "About",
+        "links": [{
+          "text": "Where we deliver",
+          "url": "http://www.tesco.pl/ezakupy/check-service-availability.php",
+          "target": "",
+          "icon": "",
+          "iconPos": ""
+        }, {
+          "text": "Service charge",
+          "url": "http://www.tesco.pl/ezakupy/help/help-booking-a-delivery.php#6a",
+          "target": "",
+          "icon": "",
+          "iconPos": ""
+        }, {
+          "text": "Payment options",
+          "url": "http://www.tesco.pl/ezakupy/help/help-payment.php#9",
+          "target": "",
+          "icon": "",
+          "iconPos": ""
+        }, {
+          "text": "Tesco.pl",
+          "url": "http://www.tesco.pl/?_ga=1.79691412.1894764782.1449742194",
+          "target": "",
+          "icon": "link-symbol",
+          "iconPos": "left"
+        }, {
+          "text": "Clubcard",
+          "url": "http://www.tesco.pl/clubcard?_ga=1.45988388.1894764782.1449742194",
+          "target": "",
+          "icon": "link-symbol",
+          "iconPos": "left"
+        }]
+      }, {
+        "title": "First time shopping",
+        "links": [{
+          "text": "How to shop",
+          "url": "http://www.tesco.pl/ezakupy/help/help-how-to-shop.php",
+          "target": "",
+          "icon": "",
+          "iconPos": ""
+        }, {
+          "text": "Registration",
+          "url": "http://www.tesco.pl/ezakupy/help/help-registration-and-my-account.php",
+          "target": "",
+          "icon": "",
+          "iconPos": ""
+        }, {
+          "text": "Book a delivery",
+          "url": "http://www.tesco.pl/ezakupy/help/help-booking-a-delivery.php?_ga=1.50753961.1894764782.1449742194",
+          "target": "",
+          "icon": "",
+          "iconPos": ""
+        },
+        {
+          "text": "Favourites",
+          "url": "http://www.tesco.pl/ezakupy/help/help-my-favourites.php?_ga=1.50753961.1894764782.1449742194",
+          "target": "",
+          "icon": "",
+          "iconPos": ""
+        },
+        {
+          "text": "How to get a VAT invoice",
+          "url": "http://www.tesco.pl/ezakupy/help-booking-a-delivery.php?&_ga=1.214406679.1894764782.1449742194#a5",
+          "target": "",
+          "icon": "",
+          "iconPos": ""
+        }]
+      }, {
+        "title": "Contact us",
+        "links": [{
+          "text": "ezakupy@tesco.pl",
+          "url": "mailto:ezakupy@tesco.pl",
+          "target": "",
+          "icon": "icon-email",
+          "iconPos": "left"
+        }, {
+          "text": "800105104",
+          "url": "tel://800105104",
+          "target": "",
+          "icon": "phone-symbol",
+          "iconPos": "left"
+        }, {
+          "text": "Send us feedback",
+          "url": "https://s.userzoom.com/m/MSBDMzUyUzMw",
+          "target": "",
+          "icon": "icon-speech-bubble",
+          "iconPos": "left"
+        }]
+      }]
+    }
+  }
+}
