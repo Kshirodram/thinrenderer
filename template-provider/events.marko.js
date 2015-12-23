@@ -11,8 +11,35 @@ function create(__helpers) {
     __tag(out,
       ___tags_ssi_renderer_js,
       {
-        "dataComponentUrl": "some value",
-        "dataContentModel": "some dat",
+        "dataComponentUrl": "./components/stamp",
+        "dataContentModel": "./data/single_stamp.json",
+        "isServer": "true"
+      },
+      function(out) {
+      });
+    __tag(out,
+      ___tags_ssi_renderer_js,
+      {
+        "dataComponentUrl": "./components/stamp",
+        "dataContentModel": "./data/single_stamp.json",
+        "isServer": "true"
+      },
+      function(out) {
+      });
+    __tag(out,
+      ___tags_ssi_renderer_js,
+      {
+        "dataComponentUrl": "./components/stamp",
+        "dataContentModel": "./data/single_stamp.json",
+        "isServer": "true"
+      },
+      function(out) {
+      });
+    __tag(out,
+      ___tags_ssi_renderer_js,
+      {
+        "dataComponentUrl": "./components/stamp",
+        "dataContentModel": "./data/single_stamp.json",
         "isServer": "true"
       },
       function(out) {
