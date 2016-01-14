@@ -11,41 +11,15 @@ function create(__helpers) {
     __tag(out,
       ___tags_ssi_renderer_js,
       {
-        "dataComponentUrl": "./components/header",
-        "dataContentModel": "http://localhost:3001/api/getheader",
-        "isServer": "true"
-      },
-      function(out) {
-      });
-    __tag(out,
-      ___tags_ssi_renderer_js,
-      {
-        "dataComponentUrl": "./components/hero_banner",
-        "dataContentModel": "http://localhost:3001/api/getherobanner",
-        "isServer": "true"
-      },
-      function(out) {
-      });
-    __tag(out,
-      ___tags_ssi_renderer_js,
-      {
         "dataComponentUrl": "./components/stamp",
-        "dataContentModel": "http://localhost:3001/api/getsinglestamp",
-        "isServer": "true"
-      },
-      function(out) {
-      });
-    __tag(out,
-      ___tags_ssi_renderer_js,
-      {
-        "dataComponentUrl": "./components/footer",
-        "dataContentModel": "http://localhost:3001/api/getfooter",
+        "dataContentModel": "http://localhost:3000/api/getsinglestamp",
+        "dataRenderPath": "stamp",
         "isServer": "true"
       },
       function(out) {
       });
 
-    out.w('</div></body></html>');
+    out.w('</div><script type="text/javascript" src="main.js"></script> </body></html>');
   };
 }
 (module.exports = require("marko").c(__filename)).c(create);

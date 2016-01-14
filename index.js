@@ -1,34 +1,37 @@
 var express = require('express');
 var app = express();
 
-var app2 = express();
+// var app2 = express();
 
-require('marko/node-require').install();
-var rootTemplate = require('./template-provider/events.marko');
+var marko = require('marko');
+
+app.use(express.static('components'));
+app.use(express.static('dist'));
+
+var rootTemplate = marko.load(require.resolve('./template-provider/events.marko'));
 
 app.get('/', function (req, res) {
-  rootTemplate.render({}, function(errTplRender, tplRendered){
-  	res.send(tplRendered);
-  });
+  rootTemplate.stream()
+  .pipe(res);
 });
 
-app2.get('/api/getsinglestamp', function(req, res){
+app.get('/api/getsinglestamp', function(req, res){
 	res.send(require('./data/single_stamp'));
 });
 
-app2.get('/api/getherobanner', function(req, res){
+app.get('/api/getherobanner', function(req, res){
 	res.send(require('./data/hero_banner'));
 });
 
-app2.get('/api/getheader', function(req, res){
+app.get('/api/getheader', function(req, res){
 	res.send(require('./data/header'));
 });
 
-app2.get('/api/getfooter', function(req, res){
+app.get('/api/getfooter', function(req, res){
 	res.send(require('./data/footer'));
 });
 
-app2.listen(3001);
+// app2.listen(3001);
 
 var server = app.listen(3000, function () {
   var host = server.address().address;

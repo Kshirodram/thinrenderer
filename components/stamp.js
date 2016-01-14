@@ -18,41 +18,50 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-// import superagent from 'superagent';
-// import bluebird from 'bluebird';
+var _superagent = require('superagent');
 
-var Stamps = (function (_React$Component) {
-  _inherits(Stamps, _React$Component);
+var _superagent2 = _interopRequireDefault(_superagent);
 
-  function Stamps(props) {
-    _classCallCheck(this, Stamps);
+var _bluebird = require('bluebird');
 
-    _get(Object.getPrototypeOf(Stamps.prototype), 'constructor', this).call(this, props);    
+var _bluebird2 = _interopRequireDefault(_bluebird);
+
+function _getData(url) {
+  return new _bluebird2['default'](function (resolve, reject) {
+    _superagent2['default'].get(url).end(function (err, res) {
+      if (err) {
+        reject(err);
+      }
+      resolve(res.body);
+    });
+  });
+}
+
+var StampsComponent = (function (_React$Component) {
+  _inherits(StampsComponent, _React$Component);
+
+  function StampsComponent(props) {
+    _classCallCheck(this, StampsComponent);
+
+    _get(Object.getPrototypeOf(StampsComponent.prototype), 'constructor', this).call(this, props);
     this.state = {
-      stampsComponentData: this.props.data.module.resource
+      stampsComponentData: this.props.data ? this.props.data.module.resource : []
     };
-    var scope = this;
-
-    // this._getData("http://localhost:3000/data/single_stamp.json")
-    //   .then(function(data){
-    //     scope.setState({stampsComponentData : data});
-    //   }, function(err){
-    //     console.log(err);
-    // });
   }
 
-  // _getData(url) {
-  //   return new bluebird(function(resolve, reject){
-  //     superagent
-  //       .get(url)
-  //       .end(function(err, res) {
-  //           let data = res.body;
-  //           resolve(data['module']['resource']);
-  //       });
-  //   });
-  // }
-
-  _createClass(Stamps, [{
+  _createClass(StampsComponent, [{
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+      var scope = this;
+      if (!this.props.data) {
+        _getData(this.props.contentModel).then(function (data) {
+          scope.setState({ stampsComponentData: data.module.resource });
+        }, function (err) {
+          console.log(err);
+        });
+      }
+    }
+  }, {
     key: 'render',
     value: function render() {
       var componentType = "";
@@ -71,17 +80,12 @@ var Stamps = (function (_React$Component) {
         console.log("Error while retrieving component type " + e);
       }
       var doubleStampIcon = componentType == 'double' ? _react2['default'].createElement('div', { className: 'double-stamp-icon' }) : [];
-      if (this.state.stampsComponentData.length == 0) {
-        return _react2['default'].createElement('div', null);
-      } else {
+      
         return _react2['default'].createElement(
           'a',
-          { href: this.state.stampsComponentData.linkText, className: componentType + "-stamp", 'img-responsive': true, style: {
+          { 'img-responsive': true, href: this.state.stampsComponentData.linkText, d: this.props.componentId, className: componentType + "-stamp", style: {
               backgroundImage: 'url(\'' + this.state.stampsComponentData.image + '\')',
-              backgroundPosition: '0% 50%',
-              display: 'block',
-              height: '300px',
-              width: '300px'
+              backgroundPosition: '0% 50%'
             } },
           _react2['default'].createElement(
             'div',
@@ -93,14 +97,18 @@ var Stamps = (function (_React$Component) {
             ),
             doubleStampIcon
           )
-        );
-      }
+        );      
+    }
+  }], [{
+    key: '_getComponentData',
+    value: function _getComponentData(url) {
+      return _getData(url);
     }
   }]);
 
-  return Stamps;
+  return StampsComponent;
 })(_react2['default'].Component);
 
-exports['default'] = Stamps;
+exports['default'] = StampsComponent;
 ;
 module.exports = exports['default'];
