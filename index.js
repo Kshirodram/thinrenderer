@@ -1,5 +1,7 @@
 var express = require('express');
 var app = express();
+var Iso = require('iso');
+var iso = new Iso();
 
 // var app2 = express();
 
@@ -11,12 +13,16 @@ app.use(express.static('dist'));
 var rootTemplate = marko.load(require.resolve('./template-provider/events.marko'));
 
 app.get('/', function (req, res) {
-  rootTemplate.stream()
+  rootTemplate.stream({'iso': new Iso})
   .pipe(res);
 });
 
 app.get('/api/getsinglestamp', function(req, res){
 	res.send(require('./data/single_stamp'));
+});
+
+app.get('/api/getdoublestamp', function(req, res){
+    res.send(require('./data/double_stamp'));
 });
 
 app.get('/api/getherobanner', function(req, res){

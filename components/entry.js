@@ -1,7 +1,10 @@
 var React = require('react');
-var component = require('./stamp.js');
 var Iso = require('iso');
-Iso.bootstrap(function (componentData) {		
-	React.render(React.createElement(component, {data: componentData, contentModel: 'http://localhost:3000/api/getsinglestamp'}), document.getElementById('stamp'));  	
-});
 
+Iso.bootstrap(function (componentData) {
+    var Component = require('./' + componentData.component_meta.dataComponentName);
+    React.render(React.createElement(Component, {
+        data: componentData[componentData.component_meta.dataRenderPath],
+        contentModel: componentData.component_meta.dataContentModel
+    }), document.getElementById(componentData.component_meta.dataRenderPath));
+});

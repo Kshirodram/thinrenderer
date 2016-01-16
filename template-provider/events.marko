@@ -21,16 +21,26 @@
             </ssi>            
             
             <ssi data-component-url="./components/hero_banner"
+                 data-component-name="hero_banner"
                  data-content-model="http://localhost:3001/api/getherobanner"
                  data-render-path="hero_banner"
                  isServer="true">
              </ssi>-->
 
              <ssi data-component-url="./components/stamp"
+                  data-component-name="stamp"
                   data-content-model="http://localhost:3000/api/getsinglestamp"
                   data-render-path="stamp"
                   isServer="true">
              </ssi>
+
+             <ssi data-component-url="./components/stamp"
+                   data-component-name="stamp"
+                   data-content-model="http://localhost:3000/api/getdoublestamp"
+                   data-render-path="stamp2"
+                   isServer="false">
+              </ssi>
+
              <!--<ssi data-component-url="./components/footer"
                   data-content-model="http://localhost:3001/api/getfooter"
                   data-render-path="footer"

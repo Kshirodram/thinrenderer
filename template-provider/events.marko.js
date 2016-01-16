@@ -12,9 +12,21 @@ function create(__helpers) {
       ___tags_ssi_renderer_js,
       {
         "dataComponentUrl": "./components/stamp",
+        "dataComponentName": "stamp",
         "dataContentModel": "http://localhost:3000/api/getsinglestamp",
         "dataRenderPath": "stamp",
         "isServer": "true"
+      },
+      function(out) {
+      });
+    __tag(out,
+      ___tags_ssi_renderer_js,
+      {
+        "dataComponentUrl": "./components/stamp",
+        "dataComponentName": "stamp",
+        "dataContentModel": "http://localhost:3000/api/getdoublestamp",
+        "dataRenderPath": "stamp2",
+        "isServer": "false"
       },
       function(out) {
       });
