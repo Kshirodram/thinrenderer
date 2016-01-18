@@ -1,39 +1,137 @@
 <!doctype html>
 <html>
+  <head>
+    <head>
+      <link rel="stylesheet" type="text/css" href="http://ngp-dc.com/groceries/css/extlibs/foundation.css">
+      <link rel="stylesheet" type="text/css" href="http://ngp-dc.com/groceries/css/intlibs/eventslayout.css">
+      <link rel="stylesheet" type="text/css" href="http://ngp-dc.com/groceries/components/Stamp/StampsComponent.css">
+      <link rel="stylesheet" type="text/css" href="http://ngp-dc.com/groceries/components/HeroBanner/HeroBannerComponent.css">
+      <link rel="stylesheet" type="text/css" href="http://ngp-dc.com/groceries/components/Header/HeaderComponent.css">
+      <link rel="stylesheet" type="text/css" href="http://ngp-dc.com/groceries/components/Footer/FooterComponent.css">
+      <meta charset="utf-8">
+      <title>Events Page</title>
+      <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    </head>
+    <body>
+      
+      <div class="root-level-loader">
+        
+        <div class='header-area'>
+          <ssi data-component-url="./components/header"
+          data-component-name="header"
+          data-content-model="http://localhost:3000/api/getheader"
+          data-render-path="header"
+          isServer="false">
+          </ssi>
+        </div>
+        <div class='row banner-area'>
+          <ssi data-component-url="./components/hero_banner"
+          data-component-name="hero_banner"
+          data-content-model="http://localhost:3000/api/getherobanner"
+          data-render-path="hero_banner"
+          isServer="true">
+          </ssi>
+        </div>
+        <div class='row content-header'>
+          <span class='content-header-text'>
+            Saving you more
+          </span>
+        </div>
+        <div class='image-area'>
+          <div class="row">
+            <div class="small-6 medium-6  columns">
+              <ssi data-component-url="./components/stamp"
+              data-component-name="stamp"
+              data-content-model="http://localhost:3000/api/getsinglestamp"
+              data-render-path="stamp1"
+              isServer="false">
+              </ssi>
+            </div>
+            <div class="small-6 medium-3 columns">
+              <ssi data-component-url="./components/stamp"
+              data-component-name="stamp"
+              data-content-model="http://localhost:3000/api/getsinglestamp"
+              data-render-path="stamp2"
+              isServer="false">
+              </ssi>
+            </div>
+            <div class="small-6 medium-3  columns">
+              <ssi data-component-url="./components/stamp"
+              data-component-name="stamp"
+              data-content-model="http://localhost:3000/api/getsinglestamp"
+              data-render-path="stamp3"
+              isServer="false">
+              </ssi>
+            </div>
+            <div class="small-6 medium-3  columns">
+              <ssi data-component-url="./components/stamp"
+              data-component-name="stamp"
+              data-content-model="http://localhost:3000/api/getsinglestamp"
+              data-render-path="stamp4"
+              isServer="false">
+              </ssi>
+            </div>
+            <div class="small-6 medium-3  columns">
+              <ssi data-component-url="./components/stamp"
+              data-component-name="stamp"
+              data-content-model="http://localhost:3000/api/getsinglestamp"
+              data-render-path="stamp5"
+              isServer="false">
+              </ssi>
+            </div>
+            <div class="small-6 medium-6  columns">
+              <ssi data-component-url="./components/stamp"
+              data-component-name="stamp"
+              data-content-model="http://localhost:3000/api/getdoublestamp"
+              data-render-path="stamp6"
+              isServer="false">
+              </ssi>
+            </div>
+          </div>
+        </div>
+        <div class='row content-header'>
+          <span class= 'content-header-text'>
+            Discover more
+          </span>
+        </div>
+        <div class='image-area'>
+          <div class="row">
+            <div class="small-6 medium-6  columns">
+              <ssi data-component-url="./components/stamp"
+              data-component-name="stamp"
+              data-content-model="http://localhost:3000/api/getdoublestamp"
+              data-render-path="stamp7"
+              isServer="false">
+              </ssi>
+            </div>
+            <div class="small-6 medium-3  columns">
+              <ssi data-component-url="./components/stamp"
+              data-component-name="stamp"
+              data-content-model="http://localhost:3000/api/getsinglestamp"
+              data-render-path="stamp8"
+              isServer="true">
+              </ssi>
+            </div>
+            <div class="small-6 medium-3  columns">
+              <ssi data-component-url="./components/stamp"
+              data-component-name="stamp"
+              data-content-model="http://localhost:3000/api/getdoublestamp"
+              data-render-path="stamp9"
+              isServer="true">
+              </ssi>
+            </div>
+          </div>
+        </div>
+        <div class='footer-area'>
+          <ssi data-component-url="./components/footer"
+          data-component-name="footer"
+          data-content-model="http://localhost:3000/api/getfooter"
+          data-render-path="footer"
+          isServer="true">
+          </ssi>
+        </div>
 
-<head>
-
-	<head>
-		<link rel="stylesheet" type="text/css" href="../assets/css/foundation.css">
-		<link rel="stylesheet" type="text/css" href="../assets/css/eventslayout.css">
-		<link rel="stylesheet" type="text/css" href="../assets/css/StampsComponent.css">
-		<link rel="stylesheet" type="text/css" href="../assets/css/HeroBannerComponent.css">
-		<link rel="stylesheet" type="text/css" href="../assets/css/HeaderComponent.css">
-		<link rel="stylesheet" type="text/css" href="../assets/css/FooterComponent.css">
-		<meta charset="utf-8">
-		<title>Events Page</title>
-		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
-	</head>
-
-	<body>
-		<div class="root-level-loader">
-			<ssi data-component-url="./components/header" data-component-name="header" data-content-model="http://localhost:3000/api/getheader" data-render-path="header" isServer="true">
-			</ssi>
-
-			<ssi data-component-url="./components/hero_banner" data-component-name="hero_banner" data-content-model="http://localhost:3000/api/getherobanner" data-render-path="hero_banner" isServer="true">
-			</ssi>
-
-			<ssi data-component-url="./components/stamp" data-component-name="stamp" data-content-model="http://localhost:3000/api/getsinglestamp" data-render-path="stamp" isServer="true">
-			</ssi>
-
-			<ssi data-component-url="./components/stamp" data-component-name="stamp" data-content-model="http://localhost:3000/api/getdoublestamp" data-render-path="stamp2" isServer="true">
-			</ssi>
-
-			<ssi data-component-url="./components/footer" data-component-name="footer" data-content-model="http://localhost:3000/api/getfooter" data-render-path="footer" isServer="true">
-			</ssi>
-
-		</div>
-		<script type="text/javascript" src="main.js"></script>
-	</body>
-
-</html>
+      </div>
+      <script type="text/javascript" src="main.js"></script>
+    </body>
+  </html>

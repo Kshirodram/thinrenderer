@@ -239,7 +239,6 @@ var HeaderComponent = (function(_React$Component2) {
         var headerData = this.state.headerData;
         var navData = this.state.navigationData;
         var self = this;
-        console.log('222222222222222222222222222222222');
         return headerData && navData
           ? _react2['default'].createElement('div', {
             className: 'header-wrapper'
