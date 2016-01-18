@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "webpack-dev-server & nodemon index.js"
+    "server": "webpack-dev-server && nodemon index.js"
   },
   "author": "Tesco",
-  "license": "BSD",
+  "license": "",
   "dependencies": {
     "react": "~0.14.3",
     "bluebird": "~3.1.1",
