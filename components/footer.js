@@ -18,6 +18,25 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _superagent = require('superagent');
+
+var _superagent2 = _interopRequireDefault(_superagent);
+
+var _bluebird = require('bluebird');
+
+var _bluebird2 = _interopRequireDefault(_bluebird);
+
+function _getData(url) {
+  return new _bluebird2['default'](function (resolve, reject) {
+    _superagent2['default'].get(url).end(function (err, res) {
+      if (err) {
+        reject(err);
+      }
+      resolve(res.body);
+    });
+  });
+}
+
 var FooterComponent = (function (_React$Component) {
   _inherits(FooterComponent, _React$Component);
 
@@ -26,15 +45,26 @@ var FooterComponent = (function (_React$Component) {
 
     _get(Object.getPrototypeOf(FooterComponent.prototype), 'constructor', this).call(this, props);
 
-    var scope = this;
-
     this.state = {
-      footerData: this.props.data.module.resources
+      footerData: this.props.data ? this.props.data.module.resources : []
     };
+
     this.toggleClick = this.toggleClick.bind(this);
   }
 
   _createClass(FooterComponent, [{
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+      var scope = this;
+      if (!this.props.data) {
+        _getData(this.props.contentModel).then(function (data) {
+          scope.setState({ footerData: data.module.resources });
+        }, function (err) {
+          console.log(err);
+        });
+      }
+    }
+  }, {
     key: 'toggleClick',
     value: function toggleClick(itemIndex) {
       this.state.footerData.sections[itemIndex]['isOpen'] = !this.state.footerData.sections[itemIndex]['isOpen'];
@@ -131,6 +161,11 @@ var FooterComponent = (function (_React$Component) {
         );
       }
       return _react2['default'].createElement('div', null);
+    }
+  }], [{
+    key: '_getComponentData',
+    value: function _getComponentData(url) {
+      return _getData(url);
     }
   }]);
 

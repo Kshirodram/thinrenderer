@@ -9,6 +9,7 @@ var marko = require('marko');
 
 app.use(express.static('components'));
 app.use(express.static('dist'));
+app.use('/assets', express.static('assets'));
 
 var rootTemplate = marko.load(require.resolve('./template-provider/events.marko'));
 

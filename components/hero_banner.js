@@ -18,6 +18,25 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _superagent = require('superagent');
+
+var _superagent2 = _interopRequireDefault(_superagent);
+
+var _bluebird = require('bluebird');
+
+var _bluebird2 = _interopRequireDefault(_bluebird);
+
+function _getData(url) {
+  return new _bluebird2['default'](function (resolve, reject) {
+    _superagent2['default'].get(url).end(function (err, res) {
+      if (err) {
+        reject(err);
+      }
+      resolve(res.body);
+    });
+  });
+}
+
 var HeroBannerComponent = (function (_React$Component) {
   _inherits(HeroBannerComponent, _React$Component);
 
@@ -25,11 +44,24 @@ var HeroBannerComponent = (function (_React$Component) {
     _classCallCheck(this, HeroBannerComponent);
 
     _get(Object.getPrototypeOf(HeroBannerComponent.prototype), 'constructor', this).call(this, props);
-    this.state = { heroBannerComponentData: this.props.data.module.resource };
-    var scope = this;
+    this.state = {
+      heroBannerComponentData: this.props.data ? this.props.data.module.resource : []
+    };
   }
 
   _createClass(HeroBannerComponent, [{
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+      var scope = this;
+      if (!this.props.data) {
+        _getData(this.props.contentModel).then(function (data) {
+          scope.setState({ heroBannerComponentData: data.module.resource });
+        }, function (err) {
+          console.log(err);
+        });
+      }
+    }
+  }, {
     key: 'render',
     value: function render() {
       if (this.state.heroBannerComponentData.length == 0) {
@@ -56,11 +88,15 @@ var HeroBannerComponent = (function (_React$Component) {
         );
       }
     }
+  }], [{
+    key: '_getComponentData',
+    value: function _getComponentData(url) {
+      return _getData(url);
+    }
   }]);
 
   return HeroBannerComponent;
 })(_react2['default'].Component);
 
 exports['default'] = HeroBannerComponent;
-;
 module.exports = exports['default'];
