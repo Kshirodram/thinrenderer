@@ -143,7 +143,7 @@ function create(__helpers) {
       {
         "dataComponentUrl": "./components/stamp",
         "dataComponentName": "stamp",
-        "dataContentModel": "http://localhost:3000/api/getdoublestamp",
+        "dataContentModel": "http://localhost:3000/api/getsinglestamp",
         "dataRenderPath": "stamp9",
         "isServer": "true"
       },
