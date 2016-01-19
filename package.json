@@ -4,8 +4,8 @@
   "description": "This is a spike to prove the thin renderer concept",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "webpack-dev-server && nodemon index.js"
+    "test": "./node_modules/.bin/karma start",
+    "server": "webpack-dev-server & nodemon index.js"
   },
   "author": "Tesco",
   "license": "",
@@ -39,8 +39,7 @@
     "karma-webpack": "^1.7.0",
     "phantomjs": "^1.9.19",
     "rewire": "^2.5.1",
-    "rewire-webpack": "^1.0.1",
-    "webpack-dev-server": "~1.14.1"
+    "rewire-webpack": "^1.0.1"
   }
 }
  

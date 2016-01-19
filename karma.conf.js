@@ -1,7 +1,7 @@
 var runReportDir = "reports/unit-tests/status-karma";
 var coverageReportDir = "reports/unit-tests/coverage-istanbul";
 var junitReportDir = "reports/unit-tests/status-junit";
-var testPackage = "tests.webpack.js";
+var testPackage = "./test/tests.webpack.js";
 
 var preprocessors = {};
     preprocessors[testPackage] = ['webpack'];
