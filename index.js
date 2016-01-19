@@ -2,8 +2,11 @@ var express = require('express');
 var app = express();
 var Iso = require('iso');
 var iso = new Iso();
+var path = require('path');
+var fs = require('fs');
+var superagent = require('superagent');
 
-// var app2 = express();
+ var edeServer = express();
 
 var marko = require('marko');
 
@@ -11,12 +14,28 @@ app.use(express.static('components'));
 app.use(express.static('dist'));
 app.use('/assets', express.static('assets'));
 
-var rootTemplate = marko.load(require.resolve('./template-provider/events.marko'));
+//var rootTemplate = marko.load(require.resolve('./template-provider/events.marko'));
+
+edeServer.get('/template', function(req, res){
+    res.setHeader('Content-Type', 'text/html');
+    res.send(fs.readFileSync(path.resolve(__dirname, './template-provider/events.html')));
+});
 
 app.get('/', function (req, res) {
-  rootTemplate.stream({'iso': new Iso})
-  .pipe(res);
+    superagent.get('http://localhost:3001/template').end(function(tplErr, tplRes){
+        fs.writeFile('./.tmp/events.marko', tplRes.text, function(err){
+            if(err) throw err;
+            var rootTemplate = marko.load(require.resolve('./.tmp/events.marko'));
+            rootTemplate.stream({'iso': new Iso})
+                .pipe(res);
+        });
+    });
 });
+
+//app.get('/', function (req, res) {
+//  rootTemplate.stream({'iso': new Iso})
+//  .pipe(res);
+//});
 
 app.get('/api/getsinglestamp', function(req, res){
 	res.send(require('./data/single_stamp'));
@@ -38,7 +57,7 @@ app.get('/api/getfooter', function(req, res){
 	res.send(require('./data/footer'));
 });
 
-// app2.listen(3001);
+ edeServer.listen(3001);
 
 var server = app.listen(3000, function () {
   var host = server.address().address;
